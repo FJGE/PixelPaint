@@ -1,0 +1,142 @@
+@font-face {
+    font-family: mysthic;
+    src: url(../fonts/Mythias.otf);
+}
+
+@font-face {
+    font-family: comfortaa;
+    src: url(../fonts/Comfortaa.ttf);
+}
+
+:root {
+    --gradient: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--gradient);
+    font-family: comfortaa;
+    text-align: center;
+    padding: 50px;
+    z-index: 0;
+}
+
+.intro .logo h1{
+    font-family: mysthic;
+    line-height: 90px;
+    font-size: 100px;
+    height: 20vh;
+    margin-bottom: 50px;
+}
+
+.intro .logo p{
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.intro .formBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+}
+
+.intro label {
+    font-size: 30px;
+}
+
+.intro select {
+    font-family: comfortaa;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 100px;
+    font-family: comfortaa;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: var(--white);
+}
+
+@media(min-width: 1400px) {
+    .intro {
+        width: 50%;
+    }
+
+    .intro .logo h1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 120px;
+        line-height: 100px;
+    }
+
+    .intro .logo p{
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+
+    .intro select {
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    
+    .image {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        background: url(../img/image-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+    }
+    
+    .image::before {
+        content: '';
+        top: -15%;
+        left: 46%;
+        position: absolute;
+        background-color: var(--white);
+        width: 150px;
+        height: 140vh;
+        transform: rotate(8deg);
+        z-index: 1;
+    }
+    
+    .image img {
+        width: 100%;
+        height: 100vh;
+    }
+}

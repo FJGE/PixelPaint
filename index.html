@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Pixel Paint</title>
+</head>
+<body>
+    <section class="intro">
+        <div class="logo">
+            <h1>Pixel Paint</h1>
+            <p>Crea tu mundo cuadrado a cuadrado</p>
+        </div>
+        <div class="formBox">
+            <form action="./pixelPaint.php" method="post">
+                <label for="select">Para empezar <br> Elija el tamaño de la cuadricula</label>
+                <br>
+                <select name="dimensiones" id="select">
+                    <option value="10">10x10</option>
+                    <option value="15">15x15</option>
+                    <option value="20">20x20</option>
+                    <option value="30">30x30</option>
+                </select>
+                <br>
+                <button type="submit">Empezar a pintar</button>
+            </form>
+        </div>
+        <p>Página realizada por Francisco Javier Gañan Escobar</p>
+    </section>
+    <div class="image"></div>
+</body>
+</html>
